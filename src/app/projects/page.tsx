@@ -1,11 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { FiExternalLink } from 'react-icons/fi';
-=======
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
->>>>>>> 85620041e210fc04933fd8f72d1c2fac27e61bfc
 
 export default function Projects() {
   const projects = [
@@ -107,14 +103,8 @@ export default function Projects() {
               <motion.div
                 key={project.title}
                 variants={projectVariants}
-<<<<<<< HEAD
                 className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                   } gap-8 items-center`}
-=======
-                className={`flex flex-col ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                } gap-8 items-center`}
->>>>>>> 85620041e210fc04933fd8f72d1c2fac27e61bfc
               >
                 {/* Project Image */}
                 <div className="w-full lg:w-1/2">
@@ -148,11 +138,7 @@ export default function Projects() {
                         {project.industry}
                       </span>
                     </div>
-<<<<<<< HEAD
 
-=======
-                    
->>>>>>> 85620041e210fc04933fd8f72d1c2fac27e61bfc
                     <h3 className="text-2xl font-bold text-gray-900 mb-4">{project.title}</h3>
                     <p className="text-gray-600 mb-6">{project.description}</p>
 
@@ -252,11 +238,7 @@ export default function Projects() {
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
               Let&apos;s discuss how we can help automate your industrial processes and achieve your goals.
-=======
-              Let's discuss how we can help automate your industrial processes and achieve your goals.
->>>>>>> 85620041e210fc04933fd8f72d1c2fac27e61bfc
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors">
@@ -266,9 +248,9 @@ export default function Projects() {
                 Download Portfolio
               </button>
             </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+          </motion.div >
+        </div >
+      </section >
+    </div >
   );
 }

@@ -49,11 +49,7 @@ export default function Contact() {
       } else {
         setSubmitStatus('error');
       }
-<<<<<<< HEAD
     } catch {
-=======
-    } catch (error) {
->>>>>>> 85620041e210fc04933fd8f72d1c2fac27e61bfc
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -286,11 +282,7 @@ export default function Contact() {
                     className="flex items-center gap-2 text-green-600 bg-green-50 p-3 rounded-lg"
                   >
                     <FiCheckCircle className="w-5 h-5" />
-<<<<<<< HEAD
                     <span>Message sent successfully! We&apos;ll get back to you soon.</span>
-=======
-                    <span>Message sent successfully! We'll get back to you soon.</span>
->>>>>>> 85620041e210fc04933fd8f72d1c2fac27e61bfc
                   </motion.div>
                 )}
 

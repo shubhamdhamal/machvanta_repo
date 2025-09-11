@@ -85,7 +85,6 @@ export default function About() {
               Our Mission
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-<<<<<<< HEAD
               We specialize in industrial automation solutions including PLC/SCADA integration,
               custom software development, and complete line automation. Our mission is to
               simplify operations and maximize productivity for modern industries.
@@ -94,16 +93,6 @@ export default function About() {
               With cutting-edge technology and deep industry expertise, we deliver solutions
               that transform manufacturing processes, reduce costs, and enhance efficiency.
               Our commitment to excellence drives us to continuously innovate and provide
-=======
-              We specialize in industrial automation solutions including PLC/SCADA integration, 
-              custom software development, and complete line automation. Our mission is to 
-              simplify operations and maximize productivity for modern industries.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              With cutting-edge technology and deep industry expertise, we deliver solutions 
-              that transform manufacturing processes, reduce costs, and enhance efficiency. 
-              Our commitment to excellence drives us to continuously innovate and provide 
->>>>>>> 85620041e210fc04933fd8f72d1c2fac27e61bfc
               world-class automation services.
             </p>
           </motion.div>
@@ -124,11 +113,7 @@ export default function About() {
               Our Journey
             </h2>
             <p className="text-lg text-gray-600">
-<<<<<<< HEAD
               Key milestones in our company&apos;s growth and development
-=======
-              Key milestones in our company's growth and development
->>>>>>> 85620041e210fc04933fd8f72d1c2fac27e61bfc
             </p>
           </motion.div>
 
@@ -147,14 +132,8 @@ export default function About() {
                 <motion.div
                   key={milestone.year}
                   variants={itemVariants}
-<<<<<<< HEAD
                   className={`flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                     } flex-col md:gap-8`}
-=======
-                  className={`flex items-center ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  } flex-col md:gap-8`}
->>>>>>> 85620041e210fc04933fd8f72d1c2fac27e61bfc
                 >
                   <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">

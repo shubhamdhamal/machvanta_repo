@@ -222,7 +222,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
               {
                 name: "Automotive",
@@ -270,15 +270,71 @@ export default function Home() {
                 name: "Textiles",
                 icon: "🧵",
                 color: "from-pink-500 to-pink-600",
-                image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=200&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1660980041852-230420b8f99f?w=300&h=200&fit=crop&crop=center",
                 alt: "Textile manufacturing"
               },
               {
                 name: "Chemicals",
                 icon: "🧪",
                 color: "from-indigo-500 to-indigo-600",
-                image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=200&fit=crop&crop=center",
+                image: "https://plus.unsplash.com/premium_photo-1661962961247-18a53b72b591?w=300&h=200&fit=crop&crop=right",
                 alt: "Chemical processing"
+              },
+              {
+                name: "Robotics and Integration",
+                icon: "🤖",
+                color: "from-cyan-500 to-cyan-600",
+                image: "https://plus.unsplash.com/premium_photo-1661878008007-7a13bf31c14b?w=300&h=200&fit=crop&crop=center",
+                alt: "Industrial robotics"
+              },
+              {
+                name: "Energy and Power",
+                icon: "⚡",
+                color: "from-yellow-500 to-orange-500",
+                image: "https://images.unsplash.com/photo-1509390144018-eeaf65052242?w=300&h=200&fit=crop&crop=center",
+                alt: "Power generation facility"
+              },
+              {
+                name: "Material Handling & Logistics",
+                icon: "📦",
+                color: "from-teal-500 to-teal-600",
+                image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=300&h=200&fit=crop&crop=center",
+                alt: "Material handling systems"
+              },
+              {
+                name: "Oil and Gas",
+                icon: "🛢️",
+                color: "from-gray-600 to-gray-700",
+                image: "https://plus.unsplash.com/premium_photo-1682144333631-eac578433ea1?w=300&h=200&fit=crop&crop=center",
+                alt: "Oil and gas refinery"
+              },
+              {
+                name: "Boiler: Heating & Cooling",
+                icon: "🔥",
+                color: "from-red-500 to-red-600",
+                image: "https://plus.unsplash.com/premium_photo-1664298589198-b15ff5382648?w=300&h=200&fit=crop&crop=center",
+                alt: "Industrial boiler system"
+              },
+              {
+                name: "HVAC",
+                icon: "🌡️",
+                color: "from-blue-400 to-blue-500",
+                image: "https://plus.unsplash.com/premium_photo-1661921393343-343742700dd3?w=300&h=200&fit=crop&crop=center",
+                alt: "HVAC system"
+              },
+              {
+                name: "Distillery",
+                icon: "🍷",
+                color: "from-amber-500 to-amber-600",
+                image: "https://plus.unsplash.com/premium_photo-1661854704184-679405ea7ff8?w=300&h=200&fit=crop&crop=center",
+                alt: "Distillery production"
+              },
+              {
+                name: "Water and Waste Water Treatment",
+                icon: "💧",
+                color: "from-blue-500 to-blue-600",
+                image: "https://plus.unsplash.com/premium_photo-1694475446818-b0e07dbff684?w=300&h=200&fit=crop&crop=center",
+                alt: "Water treatment facility"
               },
             ].map((industry, index) => (
               <motion.div

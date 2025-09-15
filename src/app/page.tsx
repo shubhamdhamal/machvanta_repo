@@ -163,7 +163,7 @@ export default function Home() {
                 icon: "🔧",
                 title: "Expert Support",
                 description: "24/7 technical support and maintenance from our certified automation engineers.",
-                image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1715635845783-a184542d95e5?w=400&h=300&fit=crop&crop=right",
                 alt: "Technical support team"
               },
               {
@@ -242,7 +242,7 @@ export default function Home() {
                 name: "Pharmaceuticals",
                 icon: "💊",
                 color: "from-purple-500 to-purple-600",
-                image: "https://images.unsplash.com/photo-1582719508467-056b624f2302?w=300&h=200&fit=crop&crop=center",
+                image: "https://images.unsplash.com/photo-1607398027609-fbd1a06fb5d4?w=400&h=300&fit=crop&crop=center",
                 alt: "Pharmaceutical production"
               },
               {

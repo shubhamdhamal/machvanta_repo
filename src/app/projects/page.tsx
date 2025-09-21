@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { FiExternalLink } from 'react-icons/fi';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Projects() {
   const projects = [
@@ -252,9 +253,9 @@ export default function Projects() {
               Let&apos;s discuss how we can help automate your industrial processes and achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors">
+              <Link href="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors text-center">
                 Start Your Project
-              </button>
+              </Link>
               <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">
                 Download Portfolio
               </button>

@@ -103,19 +103,11 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
-          className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="border-t border-gray-800 mt-8 pt-8 text-center"
         >
           <p className="text-gray-400 text-sm">
             © {currentYear} Machvanta India Pvt Ltd. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white transition-colors">
-              Terms of Service
-            </a>
-          </div>
         </motion.div>
       </div>
     </footer>

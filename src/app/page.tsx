@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FiArrowRight, FiDownload, FiMessageSquare } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -456,6 +457,26 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* WhatsApp Floating Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.5, duration: 0.5 }}
+        className="fixed bottom-6 right-6 z-50"
+      >
+        <motion.a
+          href="https://wa.me/918788294925"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
+        >
+          <FaWhatsapp className="text-2xl group-hover:animate-pulse" />
+          <span className="ml-2 text-sm font-semibold hidden sm:block">Chat with us</span>
+        </motion.a>
+      </motion.div>
     </div>
   );
 }

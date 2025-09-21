@@ -60,6 +60,21 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            {/* Legal Links */}
+            <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-300">
+              <Link
+                href="#"
+                className="text-gray-500 hover:text-blue-600 transition-colors duration-200 text-sm"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="#"
+                className="text-gray-500 hover:text-blue-600 transition-colors duration-200 text-sm"
+              >
+                Terms of Service
+              </Link>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -111,6 +126,23 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
+              {/* Mobile Legal Links */}
+              <div className="border-t border-gray-200 mt-2 pt-2">
+                <Link
+                  href="#"
+                  className="block px-3 py-2 text-gray-500 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200 text-sm"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  href="#"
+                  className="block px-3 py-2 text-gray-500 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200 text-sm"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Terms of Service
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

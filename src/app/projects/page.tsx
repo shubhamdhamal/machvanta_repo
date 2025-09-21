@@ -2,14 +2,15 @@
 
 import { motion } from 'framer-motion';
 import { FiExternalLink } from 'react-icons/fi';
+import Image from 'next/image';
 
 export default function Projects() {
   const projects = [
     {
-      title: 'Robotics Integration',
+      title: 'SPM Integration',
       industry: 'Automotive',
       description: 'Complete automation of assembly line with robotic arms integration, PLC control systems, and real-time monitoring.',
-      image: '/api/placeholder/600/400',
+      image: '/SPM_Integration.png',
       technologies: ['PLC Programming', 'SCADA', 'Robotics', 'HMI'],
       features: [
         'Automated assembly line',
@@ -23,7 +24,7 @@ export default function Projects() {
       title: 'PLC & SCADA Retrofit',
       industry: 'FMCG',
       description: 'Modernization of existing manufacturing facility with new PLC systems and advanced SCADA interface.',
-      image: '/api/placeholder/600/400',
+      image: '/PLC_SCADA_Retrofit.png',
       technologies: ['PLC Retrofit', 'SCADA Upgrade', 'HMI Design', 'Data Logging'],
       features: [
         'Legacy system modernization',
@@ -37,7 +38,7 @@ export default function Projects() {
       title: 'Conveyor Line Automation',
       industry: 'Packaging',
       description: 'Intelligent conveyor system with automated sorting, quality control, and packaging integration.',
-      image: '/api/placeholder/600/400',
+      image: '/Conveyor_Line_Automation.png',
       technologies: ['Conveyor Control', 'Vision Systems', 'Packaging', 'IoT'],
       features: [
         'Automated sorting system',
@@ -113,20 +114,30 @@ export default function Projects() {
                     transition={{ duration: 0.3 }}
                     className="relative overflow-hidden rounded-2xl shadow-lg group"
                   >
-                    <div className={`w-full h-80 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                      <div className="text-white text-center">
-                        <div className="text-6xl mb-4">🏭</div>
-                        <p className="text-lg font-semibold">{project.title}</p>
-                        <p className="text-sm opacity-80">{project.industry}</p>
+                    {project.image !== '/api/placeholder/600/400' ? (
+                      <div className="relative w-full h-80 bg-gray-200">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            console.error('Image failed to load:', e);
+                            e.currentTarget.style.display = 'none';
+                          }}
+                          onLoad={() => {
+                            console.log('Image loaded successfully');
+                          }}
+                        />
                       </div>
-                    </div>
-                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <button className="bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                          View Details
-                        </button>
+                    ) : (
+                      <div className={`w-full h-80 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
+                        <div className="text-white text-center">
+                          <div className="text-6xl mb-4">🏭</div>
+                          <p className="text-lg font-semibold">{project.title}</p>
+                          <p className="text-sm opacity-80">{project.industry}</p>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </motion.div>
                 </div>
 

@@ -282,11 +282,11 @@ export default function Home() {
                 alt: "Chemical processing"
               },
               {
-                name: "Robotics and Integration",
-                icon: "🤖",
+                name: "SPM (Special Purpose Machine) & SBM (Special Building Machine)",
+                icon: "🔧",
                 color: "from-cyan-500 to-cyan-600",
                 image: "https://plus.unsplash.com/premium_photo-1661878008007-7a13bf31c14b?w=300&h=200&fit=crop&crop=center",
-                alt: "Industrial robotics"
+                alt: "Special purpose machines"
               },
               {
                 name: "Energy and Power",

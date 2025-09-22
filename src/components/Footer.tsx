@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -34,6 +35,33 @@ const Footer = () => {
                 <p>Kharadi, Pune</p>
                 <p>Email: info@machvanta.in</p>
                 <p>Phone: +91 87882 94925</p>
+              </div>
+
+              {/* Social Media Links */}
+              <div className="mt-6">
+                <h4 className="text-sm font-semibold text-white mb-3">Follow Us</h4>
+                <div className="flex space-x-4">
+                  <motion.a
+                    href="https://www.linkedin.com/company/machvanta-india-pvt-ltd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                  >
+                    <FaLinkedin className="w-6 h-6" />
+                  </motion.a>
+                  <motion.a
+                    href="https://www.instagram.com/machvanta_india"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
+                  >
+                    <FaInstagram className="w-6 h-6" />
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
           </div>

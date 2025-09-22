@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FiTarget, FiUsers, FiAward, FiTrendingUp } from 'react-icons/fi';
+import Image from 'next/image';
 
 export default function About() {
   const milestones = [
@@ -208,6 +209,83 @@ export default function About() {
                 <div className="text-4xl mb-4">{value.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Directors Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Our Leadership Team
+            </h2>
+            <p className="text-lg text-gray-600">
+              Meet the visionaries leading Machvanta India towards automation excellence
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {[
+              {
+                name: 'Rajesh Kumar',
+                title: 'Managing Director',
+                image: 'https://plus.unsplash.com/premium_photo-1689977871600-e755257fb5f8?w=400&h=400&fit=crop&crop=face',
+                description: 'With over 15 years of experience in industrial automation, Rajesh leads our strategic vision and drives innovation across all projects.',
+                expertise: ['Strategic Planning', 'Business Development', 'Team Leadership']
+              },
+              {
+                name: 'Priyansh Sharma',
+                title: 'Technical Director',
+                image: 'https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?w=400&h=400&fit=crop&crop=face',
+                description: 'A technical expert with deep knowledge in PLC/SCADA systems, Priya ensures all our solutions meet the highest engineering standards.',
+                expertise: ['PLC Programming', 'SCADA Systems', 'Technical Excellence']
+              }
+            ].map((director, index) => (
+              <motion.div
+                key={director.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="text-center mb-6">
+                  <div className="relative w-32 h-32 mx-auto mb-4">
+                    <Image
+                      src={director.image}
+                      alt={director.name}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{director.name}</h3>
+                  <p className="text-lg text-blue-600 font-semibold mb-4">{director.title}</p>
+                  <p className="text-gray-600 mb-6">{director.description}</p>
+                </div>
+
+                <div className="border-t border-gray-200 pt-6">
+                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Expertise:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {director.expertise.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>

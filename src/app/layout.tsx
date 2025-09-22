@@ -17,6 +17,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Machvanta India Pvt Ltd - Industrial Automation Solutions",
   description: "Automation integration & bespoke development for industrial workflows. PLC/SCADA integration, custom software development, and complete line automation.",
+  icons: {
+    icon: [
+      { url: '/Machvanta_symbol.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: '/Machvanta_symbol.svg',
+  },
 };
 
 export default function RootLayout({
@@ -26,6 +33,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/Machvanta_symbol.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/Machvanta_symbol.svg" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

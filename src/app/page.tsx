@@ -4,37 +4,123 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FiArrowRight, FiDownload, FiMessageSquare } from 'react-icons/fi';
+import { FiArrowRight, FiMessageSquare } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+
+// Alternating TypewriterText Component
+const AlternatingTypewriter = () => {
+  const [displayText, setDisplayText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  const texts = ['Machvanta India', 'मॅकवंता इंडिया'];
+  const currentText = texts[currentTextIndex];
+  const speed = isDeleting ? 100 : 150;
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing
+        if (currentIndex < currentText.length) {
+          setDisplayText(currentText.substring(0, currentIndex + 1));
+          setCurrentIndex(prev => prev + 1);
+        } else {
+          // Finished typing, wait then start deleting
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        // Deleting
+        if (currentIndex > 0) {
+          setDisplayText(currentText.substring(0, currentIndex - 1));
+          setCurrentIndex(prev => prev - 1);
+        } else {
+          // Finished deleting, switch to next text
+          setIsDeleting(false);
+          setCurrentTextIndex(prev => (prev + 1) % texts.length);
+        }
+      }
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [currentIndex, isDeleting, currentText, speed]);
+
+  return (
+    <span>
+      {displayText}
+      <motion.span
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ duration: 0.8, repeat: Infinity }}
+        className="ml-1"
+      >
+        |
+      </motion.span>
+    </span>
+  );
+};
 
 export default function Home() {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50">
-          <div className="absolute inset-0 opacity-40">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                backgroundRepeat: 'repeat',
-              }}
+      <div className="relative min-h-screen flex items-center overflow-hidden pt-16">
+        {/* Video Background */}
+        <div
+          className="absolute top-16 left-0 right-0 bottom-0 w-full"
+          style={{
+            backgroundImage: 'url(https://res.cloudinary.com/dvq0oz6n6/image/upload/v1758616937/Corporate_Drone_Shot_Video_Generation_tpzbih.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            height: 'calc(100vh - 64px)'
+          }}
+        >
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-1"
+            poster="https://res.cloudinary.com/dvq0oz6n6/image/upload/v1758616937/Corporate_Drone_Shot_Video_Generation_tpzbih.jpg"
+            onLoadStart={() => console.log('Video loading started')}
+            onCanPlay={() => console.log('Video can play')}
+            onError={(e) => console.error('Video error:', e)}
+          >
+            {/* Desktop/Landscape Video */}
+            <source
+              src="https://res.cloudinary.com/dvq0oz6n6/video/upload/v1758616937/Corporate_Drone_Shot_Video_Generation_tpzbih.mp4"
+              type="video/mp4"
+              media="(min-width: 768px)"
             />
-          </div>
+            {/* Mobile/Portrait Video */}
+            <source
+              src="https://res.cloudinary.com/dvq0oz6n6/video/upload/v1758619655/Machvanta_Skyscraper_Drone_Reveal_fsh8g5.mp4"
+              type="video/mp4"
+              media="(max-width: 767px)"
+            />
+            {/* Fallback for browsers that don't support media queries */}
+            <source
+              src="https://res.cloudinary.com/dvq0oz6n6/video/upload/v1758616937/Corporate_Drone_Shot_Video_Generation_tpzbih.mp4"
+              type="video/mp4"
+            />
+          </video>
+          {/* Video Overlay - Temporarily removed for testing */}
+          {/* <div className="absolute inset-0 bg-black bg-opacity-40"></div> */}
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
-          <div className="max-w-7xl mx-auto text-center">
+        <div className="absolute bottom-0 left-0 z-10 px-4 sm:px-6 lg:px-8 pb-8 pt-16">
+          <div className="max-w-3xl text-left">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                <span className="block">Machvanta India</span>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                <span className="block">
+                  <AlternatingTypewriter />
+                </span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                   Pvt Ltd
                 </span>
@@ -45,7 +131,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed"
             >
               Automation integration & bespoke development for industrial workflows
             </motion.p>
@@ -54,11 +140,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 items-start"
             >
               <Link
                 href="/services"
-                className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2"
+                className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold text-base hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2"
               >
                 Our Services
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -66,25 +152,16 @@ export default function Home() {
 
               <Link
                 href="/contact"
-                className="group bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg border-2 border-gray-200 hover:border-blue-600 hover:shadow-lg transition-all duration-300 flex items-center gap-2"
+                className="group bg-white text-gray-900 px-6 py-3 rounded-full font-semibold text-base hover:bg-gray-100 hover:shadow-lg transition-all duration-300 flex items-center gap-2"
               >
                 <FiMessageSquare className="group-hover:rotate-12 transition-transform" />
                 Get a Quote
               </Link>
-
-              <a
-                href="/WebsiteBrochureCreationStrategy.pdf"
-                download="Machvanta-India-Brochure.pdf"
-                className="group bg-gray-900 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 transition-all duration-300 flex items-center gap-2"
-              >
-                <FiDownload className="group-hover:translate-y-1 transition-transform" />
-                Download Brochure
-              </a>
             </motion.div>
           </div>
         </div>
 
-        {/* Floating Elements */}
+        {/* Floating Elements - Removed blur effects */}
         <motion.div
           animate={{
             y: [0, -20, 0],
@@ -95,7 +172,7 @@ export default function Home() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 blur-xl z-0"
+          className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-10 z-0"
         />
 
         <motion.div
@@ -108,7 +185,7 @@ export default function Home() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-20 blur-xl z-0"
+          className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-10 z-0"
         />
 
         {/* Scroll Indicator */}

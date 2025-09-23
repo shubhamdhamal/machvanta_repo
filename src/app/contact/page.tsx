@@ -66,12 +66,12 @@ export default function Contact() {
     {
       icon: FiMapPin,
       title: 'Address',
-      details: 'Zen Square, 3rd Floor, Shop No – 305, Kharadi, Pune',
+      details: 'Zen Square, 3rd Floor, Office No – 305, Kharadi, Pune',
     },
     {
       icon: FiMail,
       title: 'Email',
-      details: 'info@machvanta.in',
+      details: 'info@machvanta.com',
     },
     {
       icon: FiPhone,
@@ -149,7 +149,7 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Find Us</h3>
                 <div className="w-full h-64 bg-gray-200 rounded-2xl shadow-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2652942559904!2d73.9502!3d18.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c065144d8d95%3A0x421b1b8c0b8b8b8b!2sKharadi%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d327.57044489885556!2d73.95647239840686!3d18.551260176775255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c33e7e16ee8b%3A0x790c3a7a67602f15!2sMACHVANTA%20INDIA%20PVT%20LTD!5e1!3m2!1sen!2sin!4v1758656243078!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}

@@ -117,10 +117,14 @@ export default function Projects() {
                   >
                     {project.image !== '/api/placeholder/600/400' ? (
                       <div className="relative w-full h-80 bg-gray-200">
-                        <img
+                        <Image
                           src={project.image}
-                          alt={project.title}
+                          alt={`${project.title} - ${project.industry} Automation Project | MACHVANTA Industrial Automation`}
+                          width={600}
+                          height={400}
                           className="w-full h-full object-cover"
+                          loading="lazy"
+                          sizes="(max-width: 768px) 100vw, 50vw"
                           onError={(e) => {
                             console.error('Image failed to load:', e);
                             e.currentTarget.style.display = 'none';

@@ -135,19 +135,19 @@ export default function Home() {
             >
               {/* Desktop/Landscape Video */}
               <source
-                src="https://res.cloudinary.com/dvq0oz6n6/video/upload/v1758616937/Corporate_Drone_Shot_Video_Generation_tpzbih.mp4"
+                src="https://res.cloudinary.com/dvq0oz6n6/video/upload/v1758736720/machvanta_Building_lxh909.mp4"
                 type="video/mp4"
                 media="(min-width: 768px)"
               />
               {/* Mobile/Portrait Video */}
               <source
-                src="https://res.cloudinary.com/dvq0oz6n6/video/upload/v1758619655/Machvanta_Skyscraper_Drone_Reveal_fsh8g5.mp4"
+                src="https://res.cloudinary.com/dvq0oz6n6/video/upload/v1758736720/machvanta_Building_lxh909.mp4"
                 type="video/mp4"
                 media="(max-width: 767px)"
               />
               {/* Fallback for browsers that don't support media queries */}
               <source
-                src="https://res.cloudinary.com/dvq0oz6n6/video/upload/v1758616937/Corporate_Drone_Shot_Video_Generation_tpzbih.mp4"
+                src="https://res.cloudinary.com/dvq0oz6n6/video/upload/v1758736720/machvanta_Building_lxh909.mp4"
                 type="video/mp4"
               />
             </video>
@@ -156,18 +156,18 @@ export default function Home() {
           </div>
 
           {/* Hero Content */}
-          <div className="absolute bottom-0 left-0 z-10 px-4 sm:px-6 lg:px-8 pb-8 pt-16">
+          <div className="absolute bottom-4 sm:bottom-0 left-0 z-10 px-4 sm:px-6 lg:px-8 pb-8 pt-16">
             <div className="max-w-3xl text-left">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-                  <span className="block">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.5)' }}>
+                  <span className="block" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.5)' }}>
                     <AlternatingTypewriter />
                   </span>
-                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600" style={{ textShadow: 'none', filter: 'contrast(1.2) brightness(1.1)' }}>
                     Pvt Ltd
                   </span>
                 </h1>
@@ -177,7 +177,8 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed"
+                className="text-lg sm:text-xl text-white mb-8 max-w-2xl leading-relaxed"
+                style={{ textShadow: '1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 6px rgba(0, 0, 0, 0.5)' }}
               >
                 Automation integration & bespoke development for industrial workflows
               </motion.p>
@@ -191,6 +192,7 @@ export default function Home() {
                 <Link
                   href="/services"
                   className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full font-semibold text-base hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2"
+                  style={{ boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3), 0 0 8px rgba(0, 0, 0, 0.2)' }}
                 >
                   Our Services
                   <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -199,6 +201,7 @@ export default function Home() {
                 <Link
                   href="/contact"
                   className="group bg-white text-gray-900 px-6 py-3 rounded-full font-semibold text-base hover:bg-gray-100 hover:shadow-lg transition-all duration-300 flex items-center gap-2"
+                  style={{ boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3), 0 0 8px rgba(0, 0, 0, 0.2)' }}
                 >
                   <FiMessageSquare className="group-hover:rotate-12 transition-transform" />
                   Get a Quote

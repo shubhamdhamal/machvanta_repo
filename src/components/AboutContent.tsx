@@ -270,6 +270,65 @@ export default function AboutContent({ milestones }: AboutContentProps) {
                     </div>
                 </section>
 
+                {/* Vision 2025 Section */}
+                <section className="py-20 bg-white">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                            className="text-center mb-16"
+                        >
+                            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                                Vision 2025
+                            </h2>
+                            <p className="text-lg text-gray-600">
+                                Our ambitious goals for the future of industrial automation
+                            </p>
+                        </motion.div>
+
+                        <div className="max-w-4xl mx-auto">
+                            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+                                <div className="space-y-6">
+                                    <div className="flex items-start space-x-4">
+                                        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span className="text-blue-600 font-bold text-sm">1</span>
+                                        </div>
+                                        <p className="text-lg">
+                                            <strong>Be a 1 Billion rupees Sales revenue organisation</strong>
+                                        </p>
+                                    </div>
+                                    <div className="flex items-start space-x-4">
+                                        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span className="text-blue-600 font-bold text-sm">2</span>
+                                        </div>
+                                        <p className="text-lg">
+                                            <strong>Be a Leading Industrial Automation products and solution provider</strong>
+                                        </p>
+                                    </div>
+                                    <div className="flex items-start space-x-4">
+                                        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span className="text-blue-600 font-bold text-sm">3</span>
+                                        </div>
+                                        <p className="text-lg">
+                                            <strong>Be a Most preferred and trusted partner for principals</strong>
+                                        </p>
+                                    </div>
+                                    <div className="flex items-start space-x-4">
+                                        <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                            <span className="text-blue-600 font-bold text-sm">4</span>
+                                        </div>
+                                        <p className="text-lg">
+                                            <strong>Be a Dream workplace for growth, pride and joy</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Directors Section */}
                 <section className="py-20 bg-white">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -291,17 +350,17 @@ export default function AboutContent({ milestones }: AboutContentProps) {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                             {[
                                 {
-                                    name: 'Rajesh Kumar',
+                                    name: 'Laxman Lad',
                                     title: 'Managing Director',
                                     image: 'https://plus.unsplash.com/premium_photo-1689977871600-e755257fb5f8?w=400&h=400&fit=crop&crop=face',
-                                    description: 'With over 15 years of experience in industrial automation, Rajesh leads our strategic vision and drives innovation across all projects.',
+                                    description: 'With over 5+ years of experience in industrial automation, Laxman leads our strategic vision and drives innovation across all projects.',
                                     expertise: ['Strategic Planning', 'Business Development', 'Team Leadership']
                                 },
                                 {
-                                    name: 'Priyansh Sharma',
+                                    name: 'Sachin Mohite',
                                     title: 'Technical Director',
                                     image: 'https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?w=400&h=400&fit=crop&crop=face',
-                                    description: 'A technical expert with deep knowledge in PLC/SCADA systems, Priya ensures all our solutions meet the highest engineering standards.',
+                                    description: 'A technical expert with deep knowledge in PLC/SCADA systems, Sachin ensures all our solutions meet the highest engineering standards.',
                                     expertise: ['PLC Programming', 'SCADA Systems', 'Technical Excellence']
                                 }
                             ].map((director, index) => (

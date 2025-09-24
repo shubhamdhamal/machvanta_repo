@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://machvanta.com'),
   title: {
     default: "MACHVANTA INDIA PVT LTD - Industrial Automation Solutions | Pune",
     template: "%s | MACHVANTA INDIA PVT LTD"
@@ -88,10 +89,17 @@ export const metadata: Metadata = {
   classification: 'Industrial Automation',
   icons: {
     icon: [
-      { url: '/Machvanta_symbol.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: 'any' }
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/web-app-manifest-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/web-app-manifest-48x48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/Machvanta_symbol.svg', type: 'image/svg+xml' }
     ],
-    apple: '/Machvanta_symbol.svg',
+    apple: [
+      { url: '/web-app-manifest-192x192.png', sizes: '192x192', type: 'image/png' }
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/Machvanta_symbol.svg', color: '#132269' }
+    ]
   },
 };
 
@@ -159,9 +167,21 @@ export default function RootLayout({
   return (
     <html lang="en-IN">
       <head>
-        <link rel="icon" href="/Machvanta_symbol.svg" type="image/svg+xml" />
+        {/* Favicon Links */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/Machvanta_symbol.svg" />
+        <link rel="icon" href="/web-app-manifest-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/web-app-manifest-48x48.png" sizes="48x48" type="image/png" />
+        <link rel="icon" href="/Machvanta_symbol.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/web-app-manifest-192x192.png" sizes="192x192" />
+        <link rel="mask-icon" href="/Machvanta_symbol.svg" color="#132269" />
+        <link rel="manifest" href="/manifest.json" />
+
+        {/* Additional Meta Tags for Search Engines */}
+        <meta name="msapplication-TileColor" content="#132269" />
+        <meta name="theme-color" content="#132269" />
+        <meta name="application-name" content="MACHVANTA INDIA PVT LTD" />
+        <meta name="msapplication-tooltip" content="Industrial Automation Solutions" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

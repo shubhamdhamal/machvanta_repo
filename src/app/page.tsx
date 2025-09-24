@@ -520,7 +520,7 @@ export default function Home() {
               {[
                 {
                   category: "PLC Systems",
-                  technologies: ["Siemens S7", "Allen-Bradley", "Schneider Electric", "Mitsubishi"],
+                  technologies: ["Modular PLCs", "Compact Controllers", "High-Performance Processors", "Industrial Controllers"],
                   icon: "🔌",
                   color: "from-blue-500 to-blue-600",
                 },
@@ -532,27 +532,27 @@ export default function Home() {
                 },
                 {
                   category: "HMI Solutions",
-                  technologies: ["Proface", "Red Lion", "Weintek", "Beijer"],
+                  technologies: ["Touch Panels", "Operator Interfaces", "Web-based HMIs", "Mobile Dashboards"],
                   icon: "🖥️",
                   color: "from-purple-500 to-purple-600",
                 },
                 {
-                  category: "Robotics",
-                  technologies: ["ABB", "KUKA", "Fanuc", "Universal Robots"],
-                  icon: "🤖",
-                  color: "from-orange-500 to-orange-600",
-                },
-                {
-                  category: "IoT & Connectivity",
-                  technologies: ["MQTT", "OPC UA", "Ethernet/IP", "Modbus"],
-                  icon: "🌐",
+                  category: "Safety Systems",
+                  technologies: ["Safety PLCs", "Emergency Stop Systems", "Safety Relays", "Guard Monitoring"],
+                  icon: "🛡️",
                   color: "from-indigo-500 to-indigo-600",
                 },
                 {
-                  category: "Data Analytics",
-                  technologies: ["SQL Server", "Power BI", "Tableau", "Python"],
-                  icon: "📈",
+                  category: "Motion Control",
+                  technologies: ["Servo Drives", "Variable Frequency Drives", "Stepper Motors", "Motion Controllers"],
+                  icon: "⚙️",
                   color: "from-red-500 to-red-600",
+                },
+                {
+                  category: "Communication Protocols",
+                  technologies: ["Ethernet/IP", "Modbus TCP", "Profibus", "DeviceNet"],
+                  icon: "📡",
+                  color: "from-teal-500 to-teal-600",
                 },
               ].map((tech, index) => (
                 <motion.div

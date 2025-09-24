@@ -37,25 +37,25 @@ export default function About() {
   const milestones = [
     {
       iconName: 'FiTarget',
-      year: '2020',
+      year: '2022',
       title: 'Company Founded',
       description: 'Machvanta India Pvt Ltd was established with a vision to revolutionize industrial automation.',
     },
     {
       iconName: 'FiTrendingUp',
-      year: '2021',
+      year: '2023',
       title: 'First Major Project',
       description: 'Successfully completed our first large-scale PLC/SCADA integration for automotive industry.',
     },
     {
       iconName: 'FiUsers',
-      year: '2022',
+      year: '2024',
       title: 'Team Expansion',
       description: 'Expanded our team with skilled engineers and automation specialists.',
     },
     {
       iconName: 'FiAward',
-      year: '2023',
+      year: '2025',
       title: 'Industry Recognition',
       description: 'Received recognition for excellence in industrial automation solutions.',
     },

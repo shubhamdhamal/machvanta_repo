@@ -198,14 +198,14 @@ export default function Home() {
                   <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
 
-                <Link
+                {/* <Link
                   href="/contact"
                   className="group bg-white text-gray-900 px-6 py-3 rounded-full font-semibold text-base hover:bg-gray-100 hover:shadow-lg transition-all duration-300 flex items-center gap-2"
                   style={{ boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3), 0 0 8px rgba(0, 0, 0, 0.2)' }}
                 >
                   <FiMessageSquare className="group-hover:rotate-12 transition-transform" />
                   Get a Quote
-                </Link>
+                </Link> */}
               </motion.div>
             </div>
           </div>

@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { FiTarget, FiUsers, FiAward, FiTrendingUp } from 'react-icons/fi';
 
 interface AboutContentProps {
@@ -352,14 +351,12 @@ export default function AboutContent({ milestones }: AboutContentProps) {
                                 {
                                     name: 'Laxman Lad',
                                     title: 'Managing Director',
-                                    image: 'https://plus.unsplash.com/premium_photo-1689977871600-e755257fb5f8?w=400&h=400&fit=crop&crop=face',
                                     description: 'With over 5+ years of experience in industrial automation, Laxman leads our strategic vision and drives innovation across all projects.',
                                     expertise: ['Strategic Planning', 'Business Development', 'Team Leadership']
                                 },
                                 {
                                     name: 'Sachin Mohite',
                                     title: 'Technical Director',
-                                    image: 'https://plus.unsplash.com/premium_photo-1689977927774-401b12d137d6?w=400&h=400&fit=crop&crop=face',
                                     description: 'A technical expert with deep knowledge in PLC/SCADA systems, Sachin ensures all our solutions meet the highest engineering standards.',
                                     expertise: ['PLC Programming', 'SCADA Systems', 'Technical Excellence']
                                 }
@@ -373,17 +370,6 @@ export default function AboutContent({ milestones }: AboutContentProps) {
                                     className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
                                 >
                                     <div className="text-center mb-6">
-                                        <div className="relative w-32 h-32 mx-auto mb-4">
-                                            <Image
-                                                src={director.image}
-                                                alt={`${director.name} - ${director.title} at MACHVANTA INDIA PVT LTD`}
-                                                width={400}
-                                                height={400}
-                                                className="w-full h-full object-cover rounded-full border-4 border-white shadow-lg"
-                                                loading="lazy"
-                                                sizes="(max-width: 768px) 100vw, 50vw"
-                                            />
-                                        </div>
                                         <h3 className="text-2xl font-bold text-gray-900 mb-2">{director.name}</h3>
                                         <p className="text-lg text-blue-600 font-semibold mb-4">{director.title}</p>
                                         <p className="text-gray-600 mb-6">{director.description}</p>

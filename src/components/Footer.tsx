@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 
@@ -20,8 +21,14 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">M</span>
+                <div className="w-8 h-8 bg-gradient-to-r from-black-600 to-black-600 rounded-lg flex items-center justify-center">
+                  <Image
+                    src="/M_logo_white.png"
+                    alt="Machvanta Logo"
+                    width={24}
+                    height={24}
+                    className="w-6 h-6 object-contain"
+                  />
                 </div>
                 <span className="text-xl font-bold">Machvanta India Pvt Ltd</span>
               </div>

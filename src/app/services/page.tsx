@@ -72,5 +72,50 @@ export default function Services() {
     },
   ];
 
-  return <ServicesContent services={services} />;
+  const serviceImages = [
+    {
+      id: 1,
+      src: 'https://img.freepik.com/free-photo/man-electrical-working-switchboard-with-fuses-uses-tablet_169016-51765.jpg?w=1200&h=600&fit=crop&crop=center',
+      alt: 'PLC SCADA System Integration',
+      title: 'PLC/SCADA System Integration',
+      description: 'Complete automation solutions with seamless PLC/SCADA integration for optimal industrial performance.'
+    },
+    {
+      id: 2,
+      src: 'https://images.unsplash.com/photo-1714322148068-923f9f9bfc1a?w=1200&h=600&fit=crop&crop=center',
+      alt: 'Industrial Automation Control Panel',
+      title: 'Custom Control Systems',
+      description: 'Bespoke control panels and HMI interfaces designed specifically for your industrial requirements.'
+    },
+    {
+      id: 3,
+      src: 'https://images.unsplash.com/photo-1684695748653-9bf05d69665c?w=1200&h=600&fit=crop&crop=center',
+      alt: 'Conveyor Line Automation',
+      title: 'Conveyor Line Automation',
+      description: 'Advanced conveyor systems with intelligent automation for enhanced productivity and efficiency.'
+    },
+    {
+      id: 4,
+      src: 'https://images.unsplash.com/photo-1748027869634-fc2e545cfb0c?w=1200&h=600&fit=crop&crop=center',
+      alt: 'Manufacturing Process Control',
+      title: 'Process Control Solutions',
+      description: 'Comprehensive process control systems ensuring precision and reliability in manufacturing operations.'
+    },
+    {
+      id: 5,
+      src: 'https://img.freepik.com/free-photo/manufacture-steel-machine-with-control-computer-clear-room_645730-186.jpg?w=1200&h=600&fit=crop&crop=center',
+      alt: 'SPM SBM Integration',
+      title: 'SPM/SBM Integration',
+      description: 'Special Purpose Machine and Special Building Machine integration for enhanced manufacturing efficiency and precision.'
+    },
+    {
+      id: 6,
+      src: 'https://img.freepik.com/free-photo/view-tiny-music-boxes-collection_23-2150545652.jpg?w=1200&h=600&fit=crop&crop=center',
+      alt: 'Servo System Integration',
+      title: 'Servo System',
+      description: 'High-precision servo motor systems with advanced control algorithms for accurate positioning and motion control.'
+    }
+  ];
+
+  return <ServicesContent services={services} serviceImages={serviceImages} />;
 }

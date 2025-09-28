@@ -3,6 +3,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiSettings, FiCode, FiTool } from 'react-icons/fi';
+import ServiceCarousel from './ServiceCarousel';
+
+interface ServiceImage {
+    id: number;
+    src: string;
+    alt: string;
+    title: string;
+    description: string;
+}
 
 interface ServicesContentProps {
     services: Array<{
@@ -11,9 +20,10 @@ interface ServicesContentProps {
         description: string;
         features: string[];
     }>;
+    serviceImages: ServiceImage[];
 }
 
-export default function ServicesContent({ services }: ServicesContentProps) {
+export default function ServicesContent({ services, serviceImages }: ServicesContentProps) {
     const getIcon = (iconName: string) => {
         switch (iconName) {
             case 'FiSettings':
@@ -98,7 +108,7 @@ export default function ServicesContent({ services }: ServicesContentProps) {
             />
             <div className="min-h-screen bg-gray-50">
                 {/* Hero Section */}
-                <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+                <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 pt-28">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
@@ -113,6 +123,9 @@ export default function ServicesContent({ services }: ServicesContentProps) {
                         </motion.div>
                     </div>
                 </section>
+
+                {/* Service Carousel */}
+                <ServiceCarousel images={serviceImages} />
 
                 {/* Services Grid */}
                 <section className="py-20">
@@ -157,14 +170,6 @@ export default function ServicesContent({ services }: ServicesContentProps) {
                                             </li>
                                         ))}
                                     </ul>
-
-                                    <motion.button
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                                    >
-                                        Learn More
-                                    </motion.button>
                                 </motion.div>
                             ))}
                         </div>
@@ -251,13 +256,16 @@ export default function ServicesContent({ services }: ServicesContentProps) {
                             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                                 Let&apos;s discuss how our automation solutions can transform your business processes and drive efficiency.
                             </p>
-                            <motion.button
+                            <motion.a
+                                href="https://wa.me/918788294925?text=Hi%2C%20I%27m%20interested%20in%20your%20industrial%20automation%20services.%20Can%20you%20help%20me%20get%20started%3F"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-white text-blue-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300"
+                                className="inline-block bg-white text-blue-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300"
                             >
                                 Get Started Today
-                            </motion.button>
+                            </motion.a>
                         </motion.div>
                     </div>
                 </section>

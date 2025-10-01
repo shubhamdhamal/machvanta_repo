@@ -122,11 +122,36 @@ const Footer = () => {
             >
               <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li>System Integration</li>
-                <li>Custom Development</li>
-                <li>Commissioning & Support</li>
-                <li>PLC/SCADA Integration</li>
-                <li>Industrial Automation</li>
+                <li>
+                  <Link href="/services/plc-scada-system-integration" className="hover:text-white transition-colors">
+                    PLC/SCADA System Integration
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/custom-control-systems" className="hover:text-white transition-colors">
+                    Custom Control Systems
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/conveyor-line-automation" className="hover:text-white transition-colors">
+                    Conveyor Line Automation
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/process-control-solutions" className="hover:text-white transition-colors">
+                    Process Control Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/spm-sbm-integration" className="hover:text-white transition-colors">
+                    SPM/SBM Integration
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services/servo-system" className="hover:text-white transition-colors">
+                    Servo System
+                  </Link>
+                </li>
               </ul>
             </motion.div>
           </div>

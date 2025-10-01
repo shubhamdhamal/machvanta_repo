@@ -108,7 +108,7 @@ export default function ServicesContent({ services, serviceImages }: ServicesCon
             />
             <div className="min-h-screen bg-gray-50">
                 {/* Hero Section */}
-                <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 pt-28">
+                <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 sm:py-20 pt-24 sm:pt-28">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}

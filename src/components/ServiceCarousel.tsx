@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ServiceImage {
     id: number;
@@ -10,6 +11,7 @@ interface ServiceImage {
     alt: string;
     title: string;
     description: string;
+    slug: string;
 }
 
 interface ServiceCarouselProps {
@@ -132,6 +134,13 @@ export default function ServiceCarousel({ images }: ServiceCarouselProps) {
                                             </motion.div>
                                         </div>
                                     </div>
+
+                                    {/* Full-slide link */}
+                                    <Link
+                                        href={`/services/${images[currentIndex].slug}`}
+                                        aria-label={`Read more about ${images[currentIndex].title}`}
+                                        className="absolute inset-0"
+                                    />
                                 </motion.div>
                             </AnimatePresence>
                         </div>
@@ -139,7 +148,7 @@ export default function ServiceCarousel({ images }: ServiceCarouselProps) {
                         {/* Navigation Arrows */}
                         <button
                             onClick={goToPrevious}
-                            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
+                            className="hidden md:flex absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
                             aria-label="Previous slide"
                         >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -149,7 +158,7 @@ export default function ServiceCarousel({ images }: ServiceCarouselProps) {
 
                         <button
                             onClick={goToNext}
-                            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
+                            className="hidden md:flex absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-10"
                             aria-label="Next slide"
                         >
                             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

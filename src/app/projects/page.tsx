@@ -184,14 +184,17 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    <div className="flex gap-4">
-                      <button className={`flex-1 bg-gradient-to-r ${project.color} text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}>
-                        View Case Study
-                      </button>
-                      <button className="px-6 py-3 border-2 border-gray-200 text-gray-700 rounded-lg font-semibold hover:border-gray-300 transition-colors">
-                        <FiExternalLink className="w-5 h-5" />
-                      </button>
-                    </div>
+                    {/**
+                     * Button group removed per request
+                     * <div className="flex gap-4">
+                     *   <button className={`flex-1 bg-gradient-to-r ${project.color} text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transition-all duration-300`}>
+                     *     View Case Study
+                     *   </button>
+                     *   <button className="px-6 py-3 border-2 border-gray-200 text-gray-700 rounded-lg font-semibold hover:border-gray-300 transition-colors">
+                     *     <FiExternalLink className="w-5 h-5" />
+                     *   </button>
+                     * </div>
+                     */}
                   </div>
                 </div>
               </motion.div>

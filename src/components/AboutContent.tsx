@@ -140,9 +140,12 @@ export default function AboutContent({ milestones }: AboutContentProps) {
                                 Our Mission
                             </h2>
                             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                                We specialize in industrial automation solutions including PLC/SCADA integration,
+                            To design and integrate advanced machines, servo systems, and automation technologies that
+                            enhance productivity and quality. To provide end-to-end automation services including consultancy, assembly, and support.
+                            To enable industries to adopt intelligent automation for sustainable growth and competitiveness.
+                                {/* We specialize in industrial automation solutions including PLC/SCADA integration,
                                 custom software development, and complete line automation. Our mission is to
-                                simplify operations and maximize productivity for modern industries.
+                                simplify operations and maximize productivity for modern industries. */}
                             </p>
                             <p className="text-lg text-gray-600 leading-relaxed">
                                 With cutting-edge technology and deep industry expertise, we deliver solutions
@@ -295,7 +298,9 @@ export default function AboutContent({ milestones }: AboutContentProps) {
                                             <span className="text-blue-600 font-bold text-sm">1</span>
                                         </div>
                                         <p className="text-lg">
-                                            <strong>Be a 1 Billion rupees Sales revenue organisation</strong>
+                                            <strong>Be a $200 Million Sales revenue organization in
+                                            next 5 years</strong>
+                                            {/* <strong>Be a 1 Billion rupees Sales revenue organisation</strong> */}
                                         </p>
                                     </div>
                                     <div className="flex items-start space-x-4">
@@ -303,7 +308,11 @@ export default function AboutContent({ milestones }: AboutContentProps) {
                                             <span className="text-blue-600 font-bold text-sm">2</span>
                                         </div>
                                         <p className="text-lg">
-                                            <strong>Be a Leading Industrial Automation products and solution provider</strong>
+                                            <strong>To drive industrial excellence by delivering smart,
+                                            reliable, and future-ready automation solutions
+                                            that empower businesses with higher efficiency,
+                                            precision, and innovation.</strong>
+                                            {/* <strong>Be a Leading Industrial Automation products and solution provider</strong> */}
                                         </p>
                                     </div>
                                     <div className="flex items-start space-x-4">

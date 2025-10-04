@@ -11,6 +11,7 @@ interface ServiceImage {
     alt: string;
     title: string;
     description: string;
+    slug: string;
 }
 
 interface ServicesContentProps {

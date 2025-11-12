@@ -76,7 +76,7 @@ export default function Contact() {
     {
       icon: FiPhone,
       title: 'Phone',
-      details: '+91 87882 94925',
+      details: '+91 9975446663 | +91 7822925356',
     },
   ];
 
@@ -253,7 +253,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-black"
-                        placeholder="+91 87882 94925"
+                        placeholder="+91 9975446663 | +91 7822925356"
                       />
                     </motion.div>
 

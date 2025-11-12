@@ -593,8 +593,19 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.5, duration: 0.5 }}
-          className="fixed bottom-6 right-6 z-50"
+          className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"
         >
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 group"
+              aria-label="Navigate to contact page"
+            >
+              <FiMessageSquare className="text-xl group-hover:animate-pulse" />
+              <span className="text-sm font-semibold hidden sm:block">Contact us</span>
+            </Link>
+          </motion.div>
+
           <motion.a
             href="https://wa.me/918788294925"
             target="_blank"

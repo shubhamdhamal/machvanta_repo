@@ -106,7 +106,7 @@ export default function PrivacyPolicy() {
                                 <p className="text-gray-700">
                                     <strong>MACHVANTA INDIA PVT LTD</strong><br />
                                     Email: privacy@machvanta.com<br />
-                                    Phone: +91 87882 94925<br />
+                                    Phone: +91 9975446663 | +91 7822925356<br />
                                     Office no -305, 3rd floor, Zen Square, Vitthal Nagar, Kharadi, Pune, Maharashtra 411014
                                 </p>
                             </div>

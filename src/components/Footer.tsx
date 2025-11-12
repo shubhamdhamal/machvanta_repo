@@ -40,8 +40,8 @@ const Footer = () => {
               <div className="space-y-2 text-sm text-gray-300">
                 <p>Zen Square, 3rd Floor, Shop No – 305</p>
                 <p>Kharadi, Pune</p>
-                <p>Email: info@machvanta.com</p>
-                <p>Phone: +91 87882 94925</p>
+                <p>Email: info@machvanta.com | service@machvanta.com </p>
+                <p>Phone: +91 9975446663 | +91 7822925356</p>
               </div>
 
               {/* Social Media Links */}

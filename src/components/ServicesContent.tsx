@@ -1,9 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiSettings, FiCode, FiTool } from 'react-icons/fi';
 import ServiceCarousel from './ServiceCarousel';
+import ServiceInquiryModal from './ServiceInquiryModal';
 
 interface ServiceImage {
     id: number;
@@ -25,6 +26,8 @@ interface ServicesContentProps {
 }
 
 export default function ServicesContent({ services, serviceImages }: ServicesContentProps) {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const getIcon = (iconName: string) => {
         switch (iconName) {
             case 'FiSettings':
@@ -257,20 +260,21 @@ export default function ServicesContent({ services, serviceImages }: ServicesCon
                             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                                 Let&apos;s discuss how our automation solutions can transform your business processes and drive efficiency.
                             </p>
-                            <motion.a
-                                href="https://wa.me/918788294925?text=Hi%2C%20I%27m%20interested%20in%20your%20industrial%20automation%20services.%20Can%20you%20help%20me%20get%20started%3F"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <motion.button
+                                onClick={() => setIsModalOpen(true)}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="inline-block bg-white text-blue-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300"
                             >
                                 Get Started Today
-                            </motion.a>
+                            </motion.button>
                         </motion.div>
                     </div>
                 </section>
             </div>
+
+            {/* Service Inquiry Modal */}
+            <ServiceInquiryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </>
     );
 }

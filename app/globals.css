@@ -1,0 +1,53 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root { 
+  --background: #ffffff; 
+  --foreground: #0f172a; 
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --muted-foreground: #64748b;
+  --ring: #06b6d4;
+  --input: #e2e8f0;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+}
+.dark { 
+  --background: #0f172a; 
+  --foreground: #e2e8f0; 
+  --card: #1e293b;
+  --card-foreground: #e2e8f0;
+  --muted-foreground: #94a3b8;
+  --ring: #06b6d4;
+  --input: #334155;
+  --accent: #334155;
+  --accent-foreground: #e2e8f0;
+}
+body { color: var(--foreground); background: var(--background); transition: color 0.3s, background-color 0.3s; }
+.input-field { width: 100%; padding: 12px 16px; border-radius: 8px; border: 1px solid #e2e8f0; background-color: #f8fafc; outline: none; transition: all 0.2s; }
+.input-field.pl-12 { padding-left: 3rem; }
+.dark .input-field { background-color: #1e293b; border-color: #334155; color: white; }
+
+/* Spline 3D canvas mobile fix */
+@media (max-width: 1024px) {
+  .spline-container {
+    overflow: hidden;
+    background: #ffffff !important;
+  }
+  .spline-container canvas {
+    min-height: 400px !important;
+    height: 400px !important;
+    background: #ffffff !important;
+    transform: translateY(-25px) scale(1.1);
+  }
+  .spline-container > div {
+    background: #ffffff !important;
+  }
+  .dark .spline-container {
+    background: #0f172a !important;
+  }
+  .dark .spline-container canvas {
+    background: #0f172a !important;
+  }
+  .dark .spline-container > div {
+    background: #0f172a !important;
+  }
+}

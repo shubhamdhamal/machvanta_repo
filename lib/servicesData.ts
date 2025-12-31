@@ -1,0 +1,9 @@
+import { Monitor, Settings, Layers, Box, Gauge, Radio } from "lucide-react";
+export const servicesData = [
+  { id: "1", slug: "plc-scada-integration", title: "PLC/SCADA System Integration", shortDescription: "Real-time monitoring and control systems.", fullDescription: "Complete PLC and SCADA solutions.", icon: Monitor, features: ["Custom Logic", "HMI Design"], applications: ["Automotive", "Pharma"] },
+  { id: "2", slug: "custom-control-systems", title: "Custom Control Systems", shortDescription: "Tailored control panel solutions.", fullDescription: "Bespoke logic design and panels.", icon: Settings, features: ["Safety PLC", "Panel Layouts"], applications: ["SPM", "Packaging"] },
+  { id: "3", slug: "conveyor-line-automation", title: "Conveyor Line Automation", shortDescription: "High-speed conveyor systems.", fullDescription: "Automate movement of goods.", icon: Layers, features: ["VFD Control", "Traffic Logic"], applications: ["Logistics", "Bottling"] },
+  { id: "4", slug: "industrial-control-panels", title: "Industrial Control Panels", shortDescription: "MCC, PCC, APFC panels.", fullDescription: "High quality switchgear panels.", icon: Box, features: ["IP54/65", "VFD Panels"], applications: ["Steel", "Sugar"] },
+  { id: "5", slug: "servo-vfd-systems", title: "Servo & VFD Systems", shortDescription: "Precision motion control.", fullDescription: "Energy efficient drive solutions.", icon: Gauge, features: ["Multi-axis", "Regenerative Braking"], applications: ["CNC", "Robotics"] },
+  { id: "6", slug: "scada-iiot", title: "SCADA & IIoT", shortDescription: "Industry 4.0 upgrades.", fullDescription: "Cloud connectivity and dashboards.", icon: Radio, features: ["OEE Dashboards", "Remote Access"], applications: ["Smart Factory", "Solar"] }
+];

@@ -97,7 +97,7 @@ const Footer = () => (
             <h4 className="text-sm font-semibold text-slate-800 dark:text-white mb-3">Follow Us</h4>
             <div className="flex gap-4">
               <a
-                href="https://www.linkedin.com/company/machvanta"
+                href="https://www.linkedin.com/company/machvanta-india-pvt-ltd"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-cyan-500 hover:text-white transition-colors"

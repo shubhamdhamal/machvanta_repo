@@ -50,7 +50,7 @@ export default function Contact() {
       title: "Visit Us",
       details: ["Zen Square, 3rd Floor", "Office No – 305, Kharadi", "Pune, Maharashtra 411014"],
       action: "Get Directions",
-      href: "https://maps.google.com/?q=Zen+Square+Kharadi+Pune"
+      href: "https://maps.google.com/?q=MACHVANTA+INDIA+PVT+LTD"
     },
     {
       icon: Mail,
@@ -104,12 +104,12 @@ export default function Contact() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
+      <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-background to-purple-500/10" />
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             className="text-center max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
@@ -123,15 +123,39 @@ export default function Contact() {
               Let&apos;s Build Something{" "}
               <span className="text-cyan-500">Amazing Together</span>
             </h1>
-            <p className="text-muted-foreground text-lg md:text-xl">
+            <p className="text-muted-foreground text-lg md:text-xl mb-8">
               Ready to transform your industrial processes? Our automation experts are here to help you achieve your goals.
             </p>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <a
+                href="#contact-form"
+                className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+              >
+                Start a Conversation
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </motion.div>
           </motion.div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center pt-2">
+            <div className="w-1.5 h-3 bg-cyan-500 rounded-full" />
+          </div>
+        </motion.div>
       </section>
 
       {/* Main Content */}
-      <section className="py-12 md:py-20">
+      <section id="contact-form" className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Contact Form - Takes 3 columns */}
@@ -291,7 +315,7 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2547158278226!2d73.94073147516695!3d18.562553982539474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4d6c77e!2sZen%20Square!5e0!3m2!1sen!2sin!4v1703980800000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15130.024421655644!2d73.9382641031693!3d18.551208103615622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c33e7e16ee8b%3A0x790c3a7a67602f15!2sMACHVANTA%20INDIA%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1767348755093!5m2!1sen!2sin"
               width="100%"
               height="450"
               style={{ border: 0 }}

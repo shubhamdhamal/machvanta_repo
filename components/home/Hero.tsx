@@ -58,13 +58,13 @@ export default function Hero() {
 
           {/* Right content - 3D Robot */}
           <motion.div
-            className="flex-1 relative w-full h-[280px] lg:h-[500px]"
+            className="flex-1 relative w-full h-[280px] lg:h-[560px]"
             style={{ minHeight: '280px' }}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="absolute inset-0 w-full h-full spline-container" style={{ minHeight: '280px' }}>
+            <div className="absolute inset-0 w-full h-full spline-container lg:scale-110" style={{ minHeight: '280px' }}>
               <SplineScene
                 scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                 className="w-full h-full"
@@ -78,7 +78,7 @@ export default function Hero() {
       </div>
 
       {/* Section Separator */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent z-20" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent z-50" />
     </section>
   );
 }

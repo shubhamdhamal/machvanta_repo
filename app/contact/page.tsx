@@ -62,7 +62,7 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+91 9975446663", "+91 7822925356"],
+      details: ["+91 9975446663", "+91 8788294925"],
       action: "Call Now",
       href: "tel:+919975446663"
     },

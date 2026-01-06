@@ -192,8 +192,8 @@ export default function TermsOfServicePage() {
                                                     +91 9975446663
                                                 </a>
                                                 {" | "}
-                                                <a href="tel:+917822925356" className="text-primary hover:underline">
-                                                    +91 7822925356
+                                                <a href="tel:+918788294925" className="text-primary hover:underline">
+                                                    +91 8788294925
                                                 </a>
                                             </p>
                                         </div>

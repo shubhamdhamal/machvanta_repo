@@ -69,9 +69,9 @@ export default function ProjectsPage() {
     return (
         <div ref={containerRef} className="bg-white dark:bg-slate-950 min-h-screen overflow-hidden">
             {/* Hero Section - Editorial Style */}
-            <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden -mt-1">
                 {/* Animated Background */}
-                <div className="absolute inset-0 bg-slate-950">
+                <div className="absolute inset-0 bg-slate-100 dark:bg-slate-950">
                     <motion.div
                         className="absolute inset-0 opacity-30"
                         style={{ y: backgroundY }}
@@ -79,10 +79,10 @@ export default function ProjectsPage() {
                         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[100px]" />
                         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-[100px]" />
                     </motion.div>
-                    <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
                 </div>
 
-                <div className="relative z-10 max-w-7xl mx-auto px-4 py-32">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -94,7 +94,7 @@ export default function ProjectsPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-cyan-400 font-mono text-sm tracking-[0.3em] uppercase mb-6"
+                            className="text-cyan-500 dark:text-cyan-400 font-mono text-sm tracking-[0.3em] uppercase mb-6"
                         >
                             Portfolio / Case Studies
                         </motion.p>
@@ -104,7 +104,7 @@ export default function ProjectsPage() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3, duration: 0.8 }}
-                            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight"
+                            className="text-5xl md:text-7xl lg:text-8xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight"
                         >
                             Projects That
                             <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 bg-clip-text text-transparent">
@@ -117,7 +117,7 @@ export default function ProjectsPage() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-12 font-light"
+                            className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12 font-light"
                         >
                             Transforming industries through intelligent automation solutions
                         </motion.p>
@@ -135,7 +135,7 @@ export default function ProjectsPage() {
                                 { value: "98%", label: "Client Retention" }
                             ].map((stat, i) => (
                                 <div key={i} className="text-center">
-                                    <div className="text-3xl md:text-4xl font-bold text-white">{stat.value}</div>
+                                    <div className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">{stat.value}</div>
                                     <div className="text-sm text-slate-500 uppercase tracking-wider mt-1">{stat.label}</div>
                                 </div>
                             ))}
@@ -143,29 +143,12 @@ export default function ProjectsPage() {
                     </motion.div>
                 </div>
 
-                {/* Scroll Indicator */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1 }}
-                    className="absolute bottom-8 left-1/2 -translate-x-1/2"
-                >
-                    <motion.div
-                        animate={{ y: [0, 8, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.5 }}
-                        className="w-6 h-10 border-2 border-slate-600 rounded-full flex items-start justify-center p-2"
-                    >
-                        <motion.div className="w-1 h-2 bg-cyan-400 rounded-full" />
-                    </motion.div>
-                </motion.div>
-
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
             </section>
 
-            {/* Featured Projects - Stacked Cards */}
+            {/* Featured Projects - Stacked Cards - COMMENTED OUT FOR NOW
             <section className="relative py-24 bg-white dark:bg-slate-950">
                 <div className="max-w-7xl mx-auto px-4">
-                    {/* Section Header */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -183,7 +166,6 @@ export default function ProjectsPage() {
                         </p>
                     </motion.div>
 
-                    {/* Horizontal Showcase */}
                     <div className="space-y-8">
                         {projects.map((project, index) => (
                             <motion.div
@@ -195,10 +177,8 @@ export default function ProjectsPage() {
                                 className="group"
                             >
                                 <div className={`relative flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 lg:gap-12 items-center`}>
-                                    {/* Image Side */}
                                     <div className="w-full lg:w-1/2 relative">
                                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                                            {/* Gradient Border Effect */}
                                             <div className={`absolute -inset-[1px] bg-gradient-to-br ${project.color} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                                             <div className="absolute inset-0 bg-slate-100 dark:bg-slate-900 rounded-2xl overflow-hidden">
                                                 <Image
@@ -208,17 +188,14 @@ export default function ProjectsPage() {
                                                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                                                     unoptimized
                                                 />
-                                                {/* Overlay */}
                                                 <div className={`absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent`} />
 
-                                                {/* Floating Number */}
                                                 <div className="absolute top-6 left-6">
                                                     <span className={`text-7xl md:text-8xl font-black bg-gradient-to-br ${project.color} bg-clip-text text-transparent opacity-80`}>
                                                         {project.id}
                                                     </span>
                                                 </div>
 
-                                                {/* Bottom Stats Bar */}
                                                 <div className="absolute bottom-0 left-0 right-0 p-6">
                                                     <div className="flex gap-8">
                                                         {Object.entries(project.stats).map(([key, value]) => (
@@ -233,9 +210,7 @@ export default function ProjectsPage() {
                                         </div>
                                     </div>
 
-                                    {/* Content Side */}
                                     <div className="w-full lg:w-1/2 py-4">
-                                        {/* Industry Tag */}
                                         <div className="inline-flex items-center gap-2 mb-4">
                                             <span className={`w-2 h-2 rounded-full bg-gradient-to-r ${project.color}`} />
                                             <span className="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
@@ -243,17 +218,14 @@ export default function ProjectsPage() {
                                             </span>
                                         </div>
 
-                                        {/* Title */}
                                         <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
                                             {project.title}
                                         </h3>
 
-                                        {/* Description */}
                                         <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
                                             {project.description}
                                         </p>
 
-                                        {/* Technologies */}
                                         <div className="mb-8">
                                             <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Technologies</p>
                                             <div className="flex flex-wrap gap-3">
@@ -268,7 +240,6 @@ export default function ProjectsPage() {
                                             </div>
                                         </div>
 
-                                        {/* View Project Link */}
                                         <motion.div
                                             whileHover={{ x: 8 }}
                                             className="inline-flex items-center gap-2 text-cyan-500 font-medium cursor-pointer group/link"
@@ -279,7 +250,6 @@ export default function ProjectsPage() {
                                     </div>
                                 </div>
 
-                                {/* Separator Line */}
                                 {index < projects.length - 1 && (
                                     <div className="mt-8 h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent" />
                                 )}
@@ -290,15 +260,16 @@ export default function ProjectsPage() {
 
                 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
             </section>
+            */}
 
             {/* Capabilities Section - Horizontal Scroll Feel */}
-            <section className="relative py-24 bg-slate-50 dark:bg-slate-900/50 overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4">
+            <section className="relative min-h-[calc(100vh-80px)] flex items-center py-16 bg-slate-50 dark:bg-slate-900/50 overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 w-full">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-center mb-16"
+                        className="text-center mb-12"
                     >
                         <p className="text-cyan-500 font-mono text-sm tracking-wider uppercase mb-3">Why Choose Us</p>
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
@@ -337,13 +308,13 @@ export default function ProjectsPage() {
             </section>
 
             {/* Process Section - Timeline Style */}
-            <section className="relative py-24 bg-white dark:bg-slate-950">
-                <div className="max-w-7xl mx-auto px-4">
+            <section className="relative min-h-[calc(100vh-80px)] flex items-center py-16 bg-white dark:bg-slate-950">
+                <div className="max-w-7xl mx-auto px-4 w-full">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-center mb-16"
+                        className="text-center mb-12"
                     >
                         <p className="text-cyan-500 font-mono text-sm tracking-wider uppercase mb-3">Our Approach</p>
                         <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">
@@ -388,7 +359,7 @@ export default function ProjectsPage() {
             </section>
 
             {/* CTA Section - Modern */}
-            <section className="relative py-32 overflow-hidden">
+            <section className="relative min-h-[calc(100vh-80px)] flex items-center py-16 overflow-hidden">
                 <div className="absolute inset-0 bg-slate-950">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-violet-500/20 rounded-full blur-[120px]" />
                 </div>

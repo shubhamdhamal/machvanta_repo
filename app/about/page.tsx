@@ -289,7 +289,7 @@ export default function AboutPage() {
                             <p className="text-lg text-gray-600 dark:text-gray-300">Meet the visionaries leading Machvanta India towards automation excellence</p>
                         </motion.div>
 
-                        <div className="grid md:grid-cols-2 gap-8">
+                        <div className="max-w-md mx-auto">
                             {/* Laxman Lad */}
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
@@ -309,35 +309,6 @@ export default function AboutPage() {
                                         <p className="text-xs font-bold text-slate-900 dark:text-white mb-3">Key Expertise:</p>
                                         <ul className="space-y-2">
                                             {["Strategic Planning", "Business Development", "Team Leadership"].map((expertise, idx) => (
-                                                <li key={idx} className="flex items-center gap-3 text-gray-700 dark:text-gray-300 text-sm">
-                                                    <CheckCircle className="w-3 h-3 text-cyan-500 flex-shrink-0" />
-                                                    {expertise}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </motion.div>
-
-                            {/* Sachin Mohite */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.1 }}
-                                viewport={{ once: true }}
-                                className="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600 rounded-lg overflow-hidden hover:border-cyan-500 dark:hover:border-cyan-500 transition-colors"
-                            >
-                                <div className="h-2 bg-gradient-to-r from-blue-500 to-cyan-500" />
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">Sachin Mohite</h3>
-                                    <p className="text-cyan-600 dark:text-cyan-400 text-sm font-semibold mb-4">Technical Director</p>
-                                    <p className="text-gray-700 dark:text-gray-300 text-sm mb-5 leading-relaxed">
-                                        A technical expert with deep knowledge in PLC/SCADA systems, Sachin ensures all our solutions meet the highest engineering standards.
-                                    </p>
-                                    <div>
-                                        <p className="text-xs font-bold text-slate-900 dark:text-white mb-3">Key Expertise:</p>
-                                        <ul className="space-y-2">
-                                            {["PLC Programming", "SCADA Systems", "Technical Excellence"].map((expertise, idx) => (
                                                 <li key={idx} className="flex items-center gap-3 text-gray-700 dark:text-gray-300 text-sm">
                                                     <CheckCircle className="w-3 h-3 text-cyan-500 flex-shrink-0" />
                                                     {expertise}

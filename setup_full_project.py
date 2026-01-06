@@ -160,7 +160,7 @@ const Footer = () => (
   <footer className="bg-slate-50 dark:bg-slate-900 border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
     <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
       <div><h3 className="text-2xl font-bold dark:text-white mb-4">MACHVANTA</h3><p className="text-gray-600 dark:text-gray-400">Future-ready automation.</p></div>
-      <div><h3 className="font-bold dark:text-white mb-4">Contact</h3><ul className="space-y-2 text-gray-600 dark:text-gray-400"><li><MapPin size={16} className="inline mr-2"/>Pune, India</li><li><Phone size={16} className="inline mr-2"/>+91 7822925356</li><li><Mail size={16} className="inline mr-2"/>info@machvanta.com</li></ul></div>
+      <div><h3 className="font-bold dark:text-white mb-4">Contact</h3><ul className="space-y-2 text-gray-600 dark:text-gray-400"><li><MapPin size={16} className="inline mr-2"/>Pune, India</li><li><Phone size={16} className="inline mr-2"/>+91 8788294925</li><li><Mail size={16} className="inline mr-2"/>info@machvanta.com</li></ul></div>
     </div>
   </footer>
 ); export default Footer;

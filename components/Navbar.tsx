@@ -1,7 +1,7 @@
 "use client"; import { useState, useEffect } from "react"; import Link from "next/link"; import Image from "next/image"; import { useTheme } from "next-themes"; import { Menu, X, Sun, Moon } from "lucide-react"; import { motion, AnimatePresence } from "framer-motion";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); const { theme, setTheme } = useTheme(); const [mounted, setMounted] = useState(false); useEffect(() => setMounted(true), []);
-  const navLinks = [{ name: "Home", href: "/" }, { name: "About", href: "/about" }, { name: "Services", href: "/services" }, { name: "Projects", href: "/projects" }, { name: "Contact", href: "/contact" }];
+  const navLinks = [{ name: "Home", href: "/" }, { name: "About", href: "/about" }, { name: "Services", href: "/services" }, /* { name: "Projects", href: "/projects" }, */ { name: "Contact", href: "/contact" }];
   return (
     <nav className="fixed w-full z-50 bg-white/80 dark:bg-darkbg/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-600 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">

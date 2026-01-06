@@ -29,7 +29,7 @@ const Footer = () => (
         <div>
           <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-6">Quick Links</h3>
           <ul className="space-y-3">
-            {['Home', 'About Us', 'Services', 'Projects', 'Contact'].map((item) => (
+            {['Home', 'About Us', 'Services', /* 'Projects', */ 'Contact'].map((item) => (
               <li key={item}>
                 <Link
                   href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
@@ -87,7 +87,7 @@ const Footer = () => (
               <Phone className="flex-shrink-0 text-cyan-500" size={18} />
               <div className="flex flex-col">
                 <a href="tel:+919975446663" className="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">+91 9975446663</a>
-                <a href="tel:+917822925356" className="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">+91 7822925356</a>
+                <a href="tel:+918788294925" className="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">+91 8788294925</a>
               </div>
             </li>
           </ul>

@@ -319,7 +319,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
                 <Phone className="flex-shrink-0 text-primary" size={18} />
-                <span>+91 7822925356</span>
+                <span>+91 8788294925</span>
               </li>
               <li className="flex items-center gap-3 text-gray-600 dark:text-gray-400">
                 <Mail className="flex-shrink-0 text-primary" size={18} />
@@ -841,7 +841,7 @@ export default function ContactPage() {
           <h1 className="text-4xl font-bold mb-8 dark:text-white">Get in Touch</h1>
           <div className="space-y-6 text-gray-600 dark:text-gray-300">
             <div className="flex gap-4"><MapPin className="text-primary" /> <p>Zen Square, Kharadi, Pune</p></div>
-            <div className="flex gap-4"><Phone className="text-primary" /> <p>+91 7822925356</p></div>
+            <div className="flex gap-4"><Phone className="text-primary" /> <p>+91 8788294925</p></div>
             <div className="flex gap-4"><Mail className="text-primary" /> <p>info@machvanta.com</p></div>
           </div>
         </SectionWrapper>

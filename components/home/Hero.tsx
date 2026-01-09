@@ -6,7 +6,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 
 export default function Hero() {
   return (
-    <section className="relative h-auto min-h-[calc(100vh-80px)] lg:h-[calc(100vh-80px)] flex items-start lg:items-center overflow-hidden bg-white dark:bg-darkbg pt-0 lg:py-0">
+    <section className="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden bg-white dark:bg-darkbg">
       {/* Spotlight Effect */}
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
@@ -19,11 +19,11 @@ export default function Hero() {
         <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-purple-600/40 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-normal" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-0 lg:px-4">
-        <div className="flex flex-col-reverse lg:flex-row items-center h-full">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center justify-center h-full">
           {/* Left content */}
           <motion.div
-            className="flex-1 py-4 lg:py-0 flex flex-col justify-center items-center lg:items-start px-4 lg:px-0 text-center lg:text-left"
+            className="flex-1 flex flex-col justify-center items-center lg:items-start text-center lg:text-left"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -56,19 +56,18 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right content - 3D Robot */}
+          {/* Right content - 3D Robot (hidden on mobile) */}
           <motion.div
-            className="flex-1 relative w-full h-[280px] lg:h-[560px]"
-            style={{ minHeight: '280px' }}
+            className="hidden lg:block flex-1 relative w-full lg:h-[560px]"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="absolute inset-0 w-full h-full spline-container lg:scale-110" style={{ minHeight: '280px' }}>
+            <div className="absolute inset-0 w-full h-full spline-container lg:scale-110">
               <SplineScene
                 scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                 className="w-full h-full"
-                style={{ width: '100%', height: '100%', minHeight: '280px' }}
+                style={{ width: '100%', height: '100%' }}
               />
             </div>
             {/* Bottom blur fade effect */}

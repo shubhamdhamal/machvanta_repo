@@ -29,7 +29,7 @@ const Footer = () => (
         <div>
           <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-6">Quick Links</h3>
           <ul className="space-y-3">
-            {['Home', 'About Us', 'Services', /* 'Projects', */ 'Contact'].map((item) => (
+            {['Home', 'About', 'Services', /* 'Projects', */ 'Contact'].map((item) => (
               <li key={item}>
                 <Link
                   href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
@@ -97,7 +97,7 @@ const Footer = () => (
             <h4 className="text-sm font-semibold text-slate-800 dark:text-white mb-3">Follow Us</h4>
             <div className="flex gap-4">
               <a
-                href="https://www.linkedin.com/company/machvanta-india-pvt-ltd"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-cyan-500 hover:text-white transition-colors"
@@ -106,7 +106,7 @@ const Footer = () => (
                 <Linkedin size={18} />
               </a>
               <a
-                href="https://www.instagram.com/machvanta"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-cyan-500 hover:text-white transition-colors"

@@ -46,13 +46,6 @@ export default function Hero() {
               >
                 Explore Services
               </Link>
-              <Link
-                href="/Brochure_Final.pdf"
-                target="_blank"
-                className="bg-slate-100 dark:bg-white/10 backdrop-blur-sm text-slate-900 dark:text-white border border-slate-200 dark:border-white/20 hover:bg-slate-200 dark:hover:bg-white/20 px-8 py-4 rounded-full font-bold transition-colors text-center"
-              >
-                Download Brochure
-              </Link>
             </div>
           </motion.div>
 

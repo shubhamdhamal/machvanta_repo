@@ -37,7 +37,7 @@ const defaultServices: Service[] = [
     summary: "Real-time monitoring and control systems. PLC handles field-level automation while SCADA provides central control interface with live monitoring, alarms, and data logging.",
     label: "Automation",
     url: "/services/plc-scada-integration",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
+    image: "https://res.cloudinary.com/dvq0oz6n6/image/upload/v1769810476/PLC-SCADA_rlo2ey.jpg",
   },
   {
     id: "service-2",
@@ -45,7 +45,7 @@ const defaultServices: Service[] = [
     summary: "Specially designed automation solutions created to meet unique requirements. Fully customizable logic, interface, and hardware for higher accuracy, efficiency, and safety.",
     label: "Custom Solutions",
     url: "/services/custom-control-systems",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1714322148068-923f9f9bfc1a?w=1200&h=600&fit=crop&crop=center",
   },
   {
     id: "service-3",
@@ -53,7 +53,7 @@ const defaultServices: Service[] = [
     summary: "Streamlines material movement, reduces manual handling, and ensures faster, safer production flow. High speed, accuracy with smart sensors and PLC control for auto-sorting and routing.",
     label: "Material Handling",
     url: "/services/conveyor-line-automation",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1684695748653-9bf05d69665c?w=1200&h=600&fit=crop&crop=center",
   },
   {
     id: "service-4",
@@ -61,7 +61,7 @@ const defaultServices: Service[] = [
     summary: "Ensures manufacturing processes run efficiently, safely, and consistently by maintaining critical parameters like temperature, pressure, flow, and level within desired limits.",
     label: "Process Control",
     url: "/services/process-control",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1748027869634-fc2e545cfb0c?w=1200&h=600&fit=crop&crop=center",
   },
   {
     id: "service-5",
@@ -69,7 +69,7 @@ const defaultServices: Service[] = [
     summary: "High speed, accuracy, and fully automated production. Servo motors feed products with precise synchronization. Automatic changeover for different packet sizes and products.",
     label: "Packaging",
     url: "/services/spm-sbm-integration",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    image: "https://img.freepik.com/free-photo/manufacture-steel-machine-with-control-computer-clear-room_645730-186.jpg?w=1200&h=600&fit=crop&crop=center",
   },
   {
     id: "service-6",
@@ -77,7 +77,7 @@ const defaultServices: Service[] = [
     summary: "Precision motion control and energy-efficient drive solutions. Servo for high-accuracy positioning, VFD for speed control of motors. Ideal for pumps, fans, conveyors, and CNC machines.",
     label: "Motion Control",
     url: "/services/servo-vfd-systems",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
+    image: "https://res.cloudinary.com/dvq0oz6n6/image/upload/VFD_System_mvsoie.jpg",
   },
   {
     id: "service-7",
@@ -85,7 +85,7 @@ const defaultServices: Service[] = [
     summary: "High-quality MCC, PCC, APFC, PLC panels, VFD/Servo panels, and Sugar Industry Electrical Panels. Premium switchgear with rigorous testing protocols.",
     label: "Manufacturing",
     url: "/services/industrial-control-panels",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop",
+    image: "https://res.cloudinary.com/dvq0oz6n6/image/upload/v1769808980/Industrial_Control_Panel_Manufacturing_oavk87.jpg",
   },
   {
     id: "service-8",
@@ -93,7 +93,7 @@ const defaultServices: Service[] = [
     summary: "Automates motor-driven processes for precise speed, position, and torque control. VFD and Servo Drives with PLC/Motion Controllers for coordination and automation logic.",
     label: "Drives",
     url: "/services/drive-motion-automation",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=300&fit=crop",
+    image: "https://res.cloudinary.com/dvq0oz6n6/image/upload/v1769808975/AdobeStock_1879190942_Preview_mvygwo.jpg",
   },
   {
     id: "service-9",
@@ -101,7 +101,7 @@ const defaultServices: Service[] = [
     summary: "Industry 4.0 upgrades for smart factories. Real-time visualization, production data logging, energy monitoring, and cloud-based analytics for remote monitoring and predictive maintenance.",
     label: "Industry 4.0",
     url: "/services/scada-iiot",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop",
+    image: "https://res.cloudinary.com/dvq0oz6n6/image/upload/v1769808980/SCADA_IIoT_Solutions_ewm8cv.jpg",
   },
   {
     id: "service-10",
@@ -109,7 +109,7 @@ const defaultServices: Service[] = [
     summary: "Upgrade old or obsolete PLC/Relay panels to modern automation systems. Replaces outdated relays with modern PLCs, HMIs, and SCADA systems with minimal downtime.",
     label: "Retrofitting",
     url: "/services/retrofitting",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop",
+    image: "https://res.cloudinary.com/dvq0oz6n6/image/upload/v1769808977/Control_System_Integration_Retrofitting_h2pfig.jpg",
   },
   {
     id: "service-11",
@@ -117,7 +117,7 @@ const defaultServices: Service[] = [
     summary: "Complete automation solutions including assembly automation for faster production, packaging automation for uniform quality, material handling with automated conveyors and lifts, and pick & place systems with high speed and precision.",
     label: "Machine Automation",
     url: "/services/machine-automation-spm",
-    image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=400&h=300&fit=crop",
+    image: "https://res.cloudinary.com/dvq0oz6n6/image/upload/v1769809708/Machine_Automation_SPM_Solutions_go67lg.jpg",
   },
   {
     id: "service-12",
@@ -125,7 +125,7 @@ const defaultServices: Service[] = [
     summary: "Comprehensive electrical services including industrial wiring and panel installation, fast electrical troubleshooting, preventive maintenance, commissioning support, and 24/7 onsite/remote support for immediate assistance.",
     label: "Support Services",
     url: "/services/electrical-onsite",
-    image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=400&h=300&fit=crop",
+    image: "https://res.cloudinary.com/dvq0oz6n6/image/upload/v1769808977/Electrical_On-Site_Services_ylesdy.jpg",
   },
 ];
 

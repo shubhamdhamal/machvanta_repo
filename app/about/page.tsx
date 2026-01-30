@@ -57,13 +57,13 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen bg-white dark:bg-darkbg">
             {/* Hero Section */}
-            <section className="relative pt-40 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <div className="absolute inset-0 w-full h-full opacity-30 dark:opacity-20 pointer-events-none">
                     <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-cyan-500/40 rounded-full blur-[120px] animate-gradient-move mix-blend-multiply dark:mix-blend-screen" />
                     <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-500/40 rounded-full blur-[120px] animate-gradient-move mix-blend-multiply dark:mix-blend-screen" />
                 </div>
 
-                <div className="relative z-10 max-w-6xl mx-auto text-center">
+                <div className="relative z-10 max-w-6xl mx-auto text-center py-16">
                     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                         <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
                             About <span className="text-cyan-500">Machvanta India</span>
